@@ -70,13 +70,27 @@ h1 {
 }
 
 .price {
+  margin: 0;
   font-size: 26px;
   font-weight: 700;
 }
 
 .inventory {
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid #bfd7cc;
+  background: #e7f4ee;
   color: #315348;
+  font-size: 14px;
   font-weight: 700;
+}
+
+.purchase-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 20px 0;
 }
 
 .checkout-button {
