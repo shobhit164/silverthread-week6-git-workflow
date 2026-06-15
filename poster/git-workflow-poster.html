@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Silverthread Git Workflow Poster</title>
+    <style>
+      :root {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #15201d;
+        background: #eef3f0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 24px;
+      }
+
+      .poster {
+        width: min(100%, 1100px);
+        min-height: 760px;
+        margin: 0 auto;
+        padding: 34px;
+        background: #ffffff;
+        border: 2px solid #cbd8d0;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 24px;
+        align-items: end;
+        padding-bottom: 24px;
+        border-bottom: 4px solid #1f5f4b;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 46px;
+        line-height: 1.05;
+      }
+
+      .subtitle {
+        margin: 12px 0 0;
+        max-width: 62ch;
+        color: #4d645d;
+        font-size: 18px;
+        line-height: 1.45;
+      }
+
+      .badge {
+        justify-self: end;
+        padding: 14px 18px;
+        background: #fff4dc;
+        border: 1px solid #f1c06d;
+        font-weight: 700;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+        margin-top: 26px;
+      }
+
+      section {
+        border: 1px solid #d8e2dd;
+        padding: 20px;
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: 24px;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+        padding-left: 22px;
+      }
+
+      li {
+        margin: 8px 0;
+        line-height: 1.38;
+      }
+
+      .branch-map {
+        display: grid;
+        gap: 10px;
+      }
+
+      .branch {
+        padding: 12px;
+        border-left: 8px solid #1f5f4b;
+        background: #f4f7f5;
+        font-weight: 700;
+      }
+
+      .branch span {
+        display: block;
+        margin-top: 4px;
+        color: #4d645d;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .conflict {
+        background: #fff4dc;
+        border-color: #f1c06d;
+      }
+
+      .success {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        border: 0;
+        padding: 0;
+      }
+
+      .metric {
+        padding: 18px;
+        border: 1px solid #d8e2dd;
+        background: #f8fbf9;
+      }
+
+      .metric strong {
+        display: block;
+        color: #1f5f4b;
+        font-size: 34px;
+      }
+
+      footer {
+        margin-top: 26px;
+        padding-top: 18px;
+        border-top: 1px solid #d8e2dd;
+        color: #4d645d;
+        font-size: 14px;
+      }
+
+      @media print {
+        body {
+          padding: 0;
+          background: #ffffff;
+        }
+
+        .poster {
+          border: 0;
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 760px) {
+        header,
+        .grid,
+        .success {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          font-size: 34px;
+        }
+
+        .badge {
+          justify-self: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="poster">
+      <header>
+        <div>
+          <h1>Git Collaboration Workflow</h1>
+          <p class="subtitle">Shobhit, Nikita, and Payal used a shared GitHub repository to demonstrate how branches, reviews, merges, and conflict resolution help developers work in parallel.</p>
+        </div>
+        <div class="badge">CPL-5559-FSDS Week 6</div>
+      </header>
+
+      <div class="grid">
+        <section>
+          <h2>Branching Model</h2>
+          <div class="branch-map">
+            <div class="branch">main <span>Stable shared branch with reviewed code.</span></div>
+            <div class="branch">Shobhit: feature/product-card-layout <span>Improved product card layout and inventory display.</span></div>
+            <div class="branch">Nikita: feature/promo-banner <span>Added seasonal sale messaging.</span></div>
+            <div class="branch">Payal: bugfix/checkout-button-copy <span>Fixed unclear checkout button text.</span></div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Team Workflow</h2>
+          <ol>
+            <li>Create a branch from `main` for one focused task.</li>
+            <li>Commit the task with a clear message.</li>
+            <li>Open a pull request and ask Shobhit, Nikita, or Payal to review.</li>
+            <li>Merge approved work into `main`.</li>
+            <li>Resolve conflicts when branches edit the same file.</li>
+          </ol>
+        </section>
+
+        <section class="conflict">
+          <h2>Conflict Resolved</h2>
+          <p>Two branches edited `src/index.html`: Nikita's branch added a weekend sale banner, while Payal's branch added a free-shipping message and checkout copy fix.</p>
+          <p><strong>Final decision:</strong> combine both ideas into one banner and keep the improved product layout plus the clearer button text.</p>
+        </section>
+
+        <section>
+          <h2>Integrated Changes</h2>
+          <ul>
+            <li>Product card now shows a cleaner price and inventory row.</li>
+            <li>Promo banner now communicates both discount and shipping offer.</li>
+            <li>Checkout button now uses clearer action-focused text.</li>
+            <li>Documentation records reviews, conflict, and resolution.</li>
+          </ul>
+        </section>
+
+        <section class="success">
+          <div class="metric"><strong>3</strong>task branches</div>
+          <div class="metric"><strong>1</strong>documented conflict</div>
+          <div class="metric"><strong>100%</strong>merged into `main`</div>
+        </section>
+      </div>
+
+      <footer>
+        Summary: Git helped Shobhit, Nikita, and Payal work independently, review small changes, catch overlapping edits, and integrate the final storefront safely.
+      </footer>
+    </article>
+  </body>
+</html>

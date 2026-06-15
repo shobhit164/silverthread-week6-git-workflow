@@ -6,7 +6,7 @@ Case Study: Week 6 WIL Project
 
 ## Scenario
 
-Silverthread is helping a growing e-commerce client improve how its developers collaborate. This repository simulates a lightweight Git workflow where team members work in parallel, open pull requests, review changes, resolve one merge conflict, and merge everything back into `main`.
+Silverthread is helping a growing e-commerce client improve how its developers collaborate. This repository is the shared GitHub project for Shobhit, Nikita, and Payal. It demonstrates a lightweight Git workflow where each team member works on a separate branch, opens a pull request, reviews a teammate's work, resolves a merge conflict, and merges approved changes back into `main`.
 
 ## Branching Model
 
@@ -19,9 +19,9 @@ Silverthread is helping a growing e-commerce client improve how its developers c
 
 | Team Member | Branch | Task |
 | --- | --- | --- |
-| Aisha | `feature/product-card-layout` | Improve product card layout, price display, and inventory badge. |
-| Mateo | `feature/promo-banner` | Add a seasonal promo banner to the storefront. |
-| Priya | `bugfix/checkout-button-copy` | Fix unclear checkout button text and improve the call to action. |
+| Shobhit | `feature/product-card-layout` | Improve product card layout, price display, and inventory badge. |
+| Nikita | `feature/promo-banner` | Add a seasonal promo banner to the storefront. |
+| Payal | `bugfix/checkout-button-copy` | Fix unclear checkout button text and improve the call to action. |
 
 ## Deliverables Included
 

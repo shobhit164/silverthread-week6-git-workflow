@@ -2,7 +2,7 @@
 
 ## Conflict
 
-The team intentionally created one simple conflict while merging `bugfix/checkout-button-copy` into `main`.
+Shobhit, Nikita, and Payal intentionally created one simple conflict while merging `bugfix/checkout-button-copy` into `main`.
 
 Both `feature/promo-banner` and `bugfix/checkout-button-copy` changed the promotional banner line in `src/index.html`:
 
@@ -18,6 +18,10 @@ The team reviewed both changes and combined the intent into one final banner:
 > Weekend sale: save 15% and get free shipping on orders over $75.
 
 This preserved the promotional campaign from the feature branch and the shipping message from the bugfix branch.
+
+For the product card section, Shobhit, Nikita, and Payal kept the improved `purchase-row` layout and also kept the clearer button text from the bugfix branch:
+
+> Add tote to checkout
 
 ## Why This Matters
 
