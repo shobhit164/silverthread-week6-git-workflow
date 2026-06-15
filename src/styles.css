@@ -18,8 +18,8 @@ body {
   max-width: 920px;
   margin: 0 auto 24px;
   padding: 16px 20px;
-  border: 1px solid #cbd8d0;
-  background: #ffffff;
+  border: 1px solid #f1c06d;
+  background: #fff4dc;
 }
 
 .promo-banner p {
@@ -70,13 +70,27 @@ h1 {
 }
 
 .price {
+  margin: 0;
   font-size: 26px;
   font-weight: 700;
 }
 
 .inventory {
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid #bfd7cc;
+  background: #e7f4ee;
   color: #315348;
+  font-size: 14px;
   font-weight: 700;
+}
+
+.purchase-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 20px 0;
 }
 
 .checkout-button {
